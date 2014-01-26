@@ -1,0 +1,36 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #606060;
+}
+
+h1, h2 {
+  font-family: 'Libre Baskerville', serif;
+  color: black;
+}
+
+.box {
+  background: #006fff;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  margin-bottom: 1rem;
+  min-height: 1rem;
+  overflow: hidden;
+  padding: 1rem 0;
+  position: relative;
+  text-align: center;
+}
+
+.container {
+  padding: 0.5rem;
+}
+@media only screen and (min-width: 48rem) {
+  .container {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "uu-grid",
+  "version": "0.0.1",
+  "description": "CSS3 flexbox grid",
+  "style": "css/uu-grid.min.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikkolehtinen/uu-grid.git"
+  },
+  "keywords": [
+    "flexbox",
+    "grid",
+    "css"
+  ],
+  "author": "@kosmikko",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/mikkolehtinen/uu-grid/issues"
+  },
+  "homepage": "https://github.com/mikkolehtinen/uu-grid",
+  "devDependencies": {
+    "gulp": "~3.4.0",
+    "gulp-stylus": "0.0.11",
+    "nib": "~1.0.2"
+  }
+}

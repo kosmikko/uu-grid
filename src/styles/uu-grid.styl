@@ -1,0 +1,16 @@
+@import nib
+
+.row
+  display: flex
+  flex-flow: row wrap
+
+.column
+  display: flex
+  flex-direction: column
+  flex: 1
+
+// create width presets with a for loop:
+$col-width = (100/12)%
+for num in (1..12)
+  .w{num}
+    flex: 0 0 round(num*$col-width, 3)
