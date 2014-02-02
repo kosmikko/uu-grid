@@ -1,0 +1,39 @@
+// Define the cache and the aliases
+$media_cache = {}
+
+$media_sizes = {
+  s: '(max-width: 640px)'
+  m: '(min-width: 641px)'
+  l: '(min-width: 1024px)'
+  xl: '(min-width: 1200px)'
+}
+
+/*
+Mixin for caching the blocks with the given conditions
+Usage:
+
+.foo
+  width: 10px
+
+  +media('m')
+    width: 20px
+*/
+media($condition)
+  helper($condition)
+    unless $media_cache[$condition]
+      $media_cache[$condition] = ()
+    push($media_cache[$condition], block)
+
+  +helper($condition)
+    {selector() + ''}
+      {block}
+
+// Function to call all the cached styles
+apply_media_cache()
+  for $media, $blocks in $media_cache
+    $media = unquote($media_sizes[$media] || $media)
+    $media = '(%s)' % $media unless match('\(', $media)
+    $media = 'only screen and %s' % $media
+    @media $media
+      for $block in $blocks
+        {$block}

@@ -1,4 +1,5 @@
 @import nib
+@require "lib/index"
 
 .row
   display: flex
@@ -9,8 +10,25 @@
   flex-direction: column
   flex: 1
 
-// create width presets with a for loop:
+// default to small screens
 $col-width = (100/12)%
 for num in (1..12)
   .w{num}
     flex: 0 0 round(num*$col-width, 3)
+
++media('m')
+  for num in (1..12)
+    .w{num}--medium
+      flex: 0 0 round(num*$col-width, 3)
+
++media('l')
+  for num in (1..12)
+    .w{num}--large
+      flex: 0 0 round(num*$col-width, 3)
+
++media('xl')
+  for num in (1..12)
+    .w{num}--xlarge
+      flex: 0 0 round(num*$col-width, 3)
+
+apply_media_cache()
