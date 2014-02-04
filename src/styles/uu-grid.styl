@@ -11,24 +11,30 @@
   flex: 1
 
 // default to small screens
-$col-width = (100/12)%
-for num in (1..12)
-  .w{num}
-    flex: 0 0 round(num*$col-width, 3)
+$col_width = (100/12)%
+
+getClass(width, screensize = null)
+  klass = width
+  klass = '%d' % width + '--' + screensize if screensize
+  return klass
+
+grid(screensize = null)
+  for num in (1..12)
+    width = round(num * $col_width, 3)
+    .w{getClass(num, screensize)}
+      flex: 0 0 width
+    .offset{getClass(num, screensize)}
+      margin-left: width;
+
+grid()
 
 +media('m')
-  for num in (1..12)
-    .w{num}--medium
-      flex: 0 0 round(num*$col-width, 3)
+  grid('medium')
 
 +media('l')
-  for num in (1..12)
-    .w{num}--large
-      flex: 0 0 round(num*$col-width, 3)
+  grid('large')
 
 +media('xl')
-  for num in (1..12)
-    .w{num}--xlarge
-      flex: 0 0 round(num*$col-width, 3)
+  grid('xlarge')
 
 apply_media_cache()
