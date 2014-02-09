@@ -14,7 +14,20 @@
   <body class="container">
     <h1>μμ-grid - Flexbox based, minimalistic CSS grid framework</h1>
 
-    <h2>minimal markup required</h2>
+    <h2>Minimal markup required</h2>
+    <pre>
+      <code>
+        &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;column&quot;&gt;
+            &lt;div class=&quot;box&quot;&gt;A&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column&quot;&gt;
+            &lt;div class=&quot;box&quot;&gt;B&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+
     <div class="row">
       <div class="column">
         <div class="box">A</div>
@@ -36,7 +49,24 @@
       </div>
     </div>
 
-    <h2>responsive column widths</h2>
+    <h2>Responsive column widths</h2>
+
+    <pre>
+      <code>
+        &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;column w2 w12--large&quot;&gt;
+            &lt;div class=&quot;box&quot;&gt;A&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column w4 w6--large&quot;&gt;
+            &lt;div class=&quot;box&quot;&gt;B&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column w6&quot;&gt;
+            &lt;div class=&quot;box&quot;&gt;C&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+
     <div class="row">
       <div class="column w2 w12--large">
         <div class="box">A</div>
@@ -61,11 +91,76 @@
     </div>
 
     <h2>Offsets</h2>
+    <pre>
+      <code>
+        &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;column w2 offset2--large&quot;&gt;
+            &lt;div class=&quot;box&quot;&gt;A&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;column w4 offset4--large&quot;&gt;
+            &lt;div class=&quot;box&quot;&gt;B&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+
     <div class="row">
       <div class="column w2 offset2--large">
         <div class="box">A</div>
       </div>
       <div class="column w4 offset4--large">
+        <div class="box">B</div>
+      </div>
+    </div>
+
+    <h2>Alignment</h2>
+    <h3>justify-start</h3>
+    <div class="row justify-start">
+      <div class="column w2">
+        <div class="box">A</div>
+      </div>
+    </div>
+
+    <h3>justify-center</h3>
+    <div class="row justify-center">
+      <div class="column w2">
+        <div class="box">A</div>
+      </div>
+    </div>
+
+    <h3>justify-end</h3>
+    <div class="row justify-end">
+      <div class="column w2">
+        <div class="box">A</div>
+      </div>
+    </div>
+
+    <h3>align-top</h3>
+    <div class="row align-top">
+      <div class="column w2">
+        <div class="box large">A</div>
+      </div>
+      <div class="column w2">
+        <div class="box">B</div>
+      </div>
+    </div>
+
+    <h3>align-middle</h3>
+    <div class="row align-middle">
+      <div class="column w2">
+        <div class="box large">A</div>
+      </div>
+      <div class="column w2">
+        <div class="box">B</div>
+      </div>
+    </div>
+
+    <h3>align-bottom</h3>
+    <div class="row align-bottom">
+      <div class="column w2">
+        <div class="box large">A</div>
+      </div>
+      <div class="column w2">
         <div class="box">B</div>
       </div>
     </div>

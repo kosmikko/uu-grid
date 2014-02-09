@@ -2,6 +2,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   color: #606060;
+  background: #EBEBE7;
 }
 
 h1, h2 {
@@ -10,10 +11,10 @@ h1, h2 {
 }
 
 .box {
-  background: #006fff;
+  background: #137F00;
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  border: 1px solid #fff;
+  border: 1px solid rgba(255,255,255, 0.5);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -25,7 +26,13 @@ h1, h2 {
   position: relative;
   text-align: center;
 }
+.box.large {
+  height: 6rem;
+}
 
+pre {
+  background: white;
+}
 .container {
   padding: 0.5rem;
 }
