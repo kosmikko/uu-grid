@@ -1,0 +1,13 @@
+{
+  "name": "uu-css",
+  "repo": "mikkolehtinen/uu-grid",
+  "description": "Flexbox based, minimalistic CSS grid framework",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "styles": [
+    "uu-grid.css"
+  ]
+}

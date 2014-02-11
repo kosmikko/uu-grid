@@ -4,7 +4,7 @@ var stylus = require('gulp-stylus');
 gulp.task('styl', function () {
   gulp.src('./src/styles/*.styl')
     .pipe(stylus({use: ['nib']}))
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('watch', function(){
